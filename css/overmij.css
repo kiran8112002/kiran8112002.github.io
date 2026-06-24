@@ -15,6 +15,65 @@
         }
 
 
+
+
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgb(211, 204, 204);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+   /* section {
+    max-width: 900px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    color: white; 
+}*/
+        h1 {
+            color: #000;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+
+
+
+.content-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: rgb(211, 204, 204);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.side-img {
+    width: 150;
+    height: 150;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.text {
+    flex: 1;
+}
+
+
          footer {
             text-align: center;
             padding: 15px;
@@ -40,4 +99,39 @@
     width: 70px;
     height: 70px;
     border-radius: 50%; /* Maakt het logo rond */
+}
+
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between; /* links en rechts */
+    /* margin: 30px 0; */
+}
+
+.nav-btn {
+    background-color: #fff;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.nav-btn:hover {
+    background-color: #8dc0f6;
+}
+
+
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .side-img {
+        width: 100%;
+        height: auto;
+    }
 }
