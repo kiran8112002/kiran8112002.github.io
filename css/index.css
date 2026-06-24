@@ -1,0 +1,86 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2873be;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #cf7f1c;
+            color: white;
+            padding: 1px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgb(211, 204, 204);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #000;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+       
+        .skills span {
+            display: inline-block;
+            background: #f50e50;
+            color: rgb(255, 255, 255);
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #cf7f1c;
+            color: white;
+            margin-top: 20px;
+        }
+
+        #clock {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Maakt het logo rond */
+}
+
+.navigation {
+    text-align: right;
+    /* margin: 30px 0; */
+}
+
+.next-btn {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.next-btn:hover {
+    background-color: #8dc0f6;
+}
