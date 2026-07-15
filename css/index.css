@@ -1,86 +1,135 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #2873be;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #cf7f1c;
-            color: white;
-            padding: 1px;
-            text-align: center;
-        }
-
-        section {
-            max-width: 900px;
-            margin: 20px auto;
-            background: rgb(211, 204, 204);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #000;
-            margin-bottom: 10px;
-            font-size: 24px;
-        }
-
-       
-        .skills span {
-            display: inline-block;
-            background: #f50e50;
-            color: rgb(255, 255, 255);
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #cf7f1c;
-            color: white;
-            margin-top: 20px;
-        }
-
-        #clock {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: rgba(255,255,255,0.2);
-    padding: 5px 10px;
-    border-radius: 5px;
+/*===== HOME =====*/
+.home {
+  position: relative;
+  row-gap: 2rem;
+  padding: 4rem 0 5rem;
+}
+.home__data {
+  align-self: center;
+}
+.home__title {
+  font-size: var(--big-font-size);
+  margin-bottom: var(--mb-2);
+}
+.home__title-color {
+  color: var(--first-color);
+  text-shadow: 0 0 24px hsla(var(--hue-color), 89%, 60%, 0.6);
+}
+.home__subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: var(--mb-4);
+}
+.home__clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: var(--first-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid hsla(var(--hue-color), 89%, 60%, 0.35);
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  margin-bottom: var(--mb-5);
+}
+.home__clock i {
+  font-size: 1rem;
+}
+.home__social {
+  display: flex;
+  flex-direction: column;
+}
+.home__social-icon {
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+.home__social-icon:hover {
+  color: var(--first-color);
+}
+.home__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 260px;
+}
+.home__blob {
+  fill: var(--first-color);
+}
+.home__blob-img {
+  width: 360px;
+  animation: float-blob 4s ease-in-out infinite;
+}
+@keyframes float-blob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
 }
 
-.logo {
-    position: absolute;
-    left: 20px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%; /* Maakt het logo rond */
+/* ===== MEDIA QUERIES=====*/
+@media screen and (max-width: 320px) {
+  .home {
+    row-gap: 2rem;
+  }
+  .home__img {
+    width: 200px;
+  }
 }
-
-.navigation {
-    text-align: right;
-    /* margin: 30px 0; */
+@media screen and (min-width: 576px) {
+  .home {
+    padding: 4rem 0 2rem;
+  }
+  .home__social {
+    padding-top: 0;
+    padding-bottom: 2.5rem;
+    flex-direction: row;
+    align-self: flex-end;
+  }
+  .home__social-icon {
+    margin-bottom: 0;
+    margin-right: var(--mb-4);
+  }
+  .home__img {
+    width: 300px;
+    bottom: 25%;
+  }
+  .work__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    padding-top: 2rem;
+  }
+  .contact__form {
+    width: 360px;
+    padding-top: 2rem;
+  }
+  .contact__container {
+    justify-items: center;
+  }
 }
-
-.next-btn {
-    background-color: #fff;
-    color: rgb(0, 0, 0);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
+@media screen and (min-width: 768px) {
+  .home {
+    padding: 8rem 0 2rem;
+  }
+  .home__img {
+    width: 400px;
+    bottom: 10%;
+  }
+  .work__container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
 }
-
-.next-btn:hover {
-    background-color: #8dc0f6;
+@media screen and (min-width: 992px) {
+  .home {
+    padding: 10rem 0 2rem;
+  }
+  .home__img {
+    width: 450px;
+  }
 }
