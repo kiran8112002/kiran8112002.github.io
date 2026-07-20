@@ -52,6 +52,7 @@
 html{
     scroll-behavior:smooth;
     overflow-x:hidden;
+    height:100%;
 }
 body::before{
     content:"";
@@ -69,11 +70,22 @@ body::before{
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
   background-color:rgba(37, 37, 37, 0.96) ;
+}
+
+.l-main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 h1, h2, p {

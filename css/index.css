@@ -215,9 +215,6 @@
   .home {
     padding: 3rem 0 2rem;
   }
-  .home__data {
-    margin-left: -2.5rem;
-  }
   .home__img {
     width: 500px;
     bottom: 10%;
@@ -231,9 +228,6 @@
   .home {
     max-width: 1600px;
     padding: 3rem 0 2rem;
-  }
-  .home__data {
-    margin-left: -2rem;
   }
   .home__img {
     width: 562px;
